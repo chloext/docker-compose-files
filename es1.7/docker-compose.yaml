@@ -1,0 +1,10 @@
+version: '3'
+services:
+  elasticsearch:
+    image: quay.io/trackmaven/elasticsearch:1.7
+    ports:
+      - 9200:9200
+    environment:
+      - ES_SCRIPT_ENGINE_GROOVY_INLINE_AGGS=on
+    volumes:
+      - /usr/share/elasticsearch
